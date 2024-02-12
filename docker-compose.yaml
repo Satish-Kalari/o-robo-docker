@@ -7,6 +7,7 @@ networks:
 services:
   # Following command is eqalent to docker run -d --name mongodb --netwrok=roboshop mongodb:v1
   mongodb: 
+    # if we dont give here container name than default name woubld be name of the folder in which we have all serice and service name (o-robo-docker-mongodb-v1)
     container_name: mongodb
     image: mongodb:v1
     # networks:
@@ -45,6 +46,10 @@ services:
     depends_on:
     - redis
     - catalogue
+
+  mysql:
+    container_name: mysql
+    image: mysql:v1
  
   
 
