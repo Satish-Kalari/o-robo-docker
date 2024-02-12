@@ -2,7 +2,7 @@
 # since we gave this network as default no need to mention network name in services 
 networks:
   default:
-    external: true
+    external:
       name: roboshop
 services:
   # Following command is eqalent to docker run -d --name mongodb --netwrok=roboshop mongodb:v1
