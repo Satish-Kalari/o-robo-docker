@@ -3,3 +3,8 @@ FROM mongo:5
 # (2) This command is typically used to initialize a database inside a Docker container by copying the necessary scripts or data files to the container's file system. 
 # (3) The asterisk () is a wildcard character that matches any file name with the ".js" extension in the current directory
 COPY *.js /docker-entrypoint-initdb.d/
+
+# docker build -t mongodb:v1 <---to build image
+# docker run -d --name mongodb mongodb:v1 <--- to create and run container with name
+# docker ps <-- to see running container
+# docker logs mongodb <-- to see logs of mongodb
