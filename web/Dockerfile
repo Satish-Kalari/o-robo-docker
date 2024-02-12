@@ -12,7 +12,7 @@ COPY roboshop.conf /etc/nginx/nginx.conf
 ADD static /usr/share/nginx/html/
 # we donr need CMD here, this will atomatically run once we create container
 
-# docker build -t web:v1 <---to build image
+# docker build -t web:v1 . <---to build image
 
 # docker run -d -p 80:80 --name web --network=roboshop catalogue:v1 <--- to create and run container with name, in roboshop network with 80 prot
 

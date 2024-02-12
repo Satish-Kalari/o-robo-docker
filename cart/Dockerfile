@@ -16,7 +16,7 @@ CMD ["node", "server.js"]
 
 # No need to give mongodb URL in cart since server.js contains name "monogobd" with which cart will connect and load into to monodb databse 
 
-# docker build -t cart:v1 <---to build image
+# docker build -t cart:v1 . <---to build image
 
 # docker run -d --name cart --network=roboshop cart:v1 <--- to create and run container with name, in roboshop network
 

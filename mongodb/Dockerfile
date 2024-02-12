@@ -5,7 +5,7 @@ FROM mongo:5
 # (3) The asterisk () is a wildcard character that matches any file name with the ".js" extension in the current directory
 COPY *.js /docker-entrypoint-initdb.d/
 
-# docker build -t mongodb:v1 <---to build image
+# docker build -t mongodb:v1 . <---to build image
 
 # *** docker network create roboshop <--- creating roboshop network ***
 
