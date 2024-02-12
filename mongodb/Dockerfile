@@ -1,0 +1,5 @@
+FROM mongo:5
+# (1) Dockerfile to copy all files with the extension ".js" to the "/docker-entrypoint-initdb.d/" directory inside the Docker container
+# (2) This command is typically used to initialize a database inside a Docker container by copying the necessary scripts or data files to the container's file system. 
+# (3) The asterisk () is a wildcard character that matches any file name with the ".js" extension in the current directory
+COPY *.js /docker-entrypoint-initdb.d/
