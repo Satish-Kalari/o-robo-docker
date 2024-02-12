@@ -6,7 +6,10 @@ FROM mongo:5
 COPY *.js /docker-entrypoint-initdb.d/
 
 # docker build -t mongodb:v1 <---to build image
+
 # *** docker network create roboshop <--- creating roboshop network ***
+
 # docker run -d --name mongodb --network=roboshop mongodb:v1 <--- to create and run container with name, in roboshop network
+
 # docker ps <-- to see running container
 # docker logs mongodb <-- to see logs of mongodb

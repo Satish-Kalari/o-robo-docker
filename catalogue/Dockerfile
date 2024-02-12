@@ -19,5 +19,6 @@ CMD ["node", "server.js"]
 # docker build -t catalogue:v1 <---to build image
 
 # docker run -d --name catalogue --network=roboshop catalogue:v1 <--- to create and run container with name, in roboshop network
+
 # docker ps <-- to see running container
 # docker logs catalogue <-- to see logs of catalogue
