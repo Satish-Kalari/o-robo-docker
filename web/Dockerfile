@@ -1,10 +1,14 @@
 FROM nginx
-# removing index.html from /usr/share/nginx/html/ location
+# removing default index.html from /usr/share/nginx/html/ location
 RUN rm -rf /usr/share/nginx/html/index.html
-# copying local roboshop.conf file to /etc/nginx/default.d/roboshop.conf location
-COPY roboshop.conf /etc/nginx/default.d/roboshop.conf
+# removing default nginx.conf from /etc/nginx/ location
+RUN rm -rf /etc/nginx/nginx.conf
+# removing default.conf from /etc/nginx/conf.d/default.conf location
+RUN rm -rf /etc/nginx/conf.d/default.conf
+# copying our custom roboshop.conf local file to /etc/nginx/nginx.conf location
+COPY roboshop.conf /etc/nginx/nginx.conf
 # COPY and ADD are same, ADD has two extra function, copying from URL and untar
-# assing static folde from local to /usr/share/nginx/html/ location
+# Adding our custom html data from static local folder to /usr/share/nginx/html/ location
 ADD static /usr/share/nginx/html/
 
 # docker build -t web:v1 <---to build image
