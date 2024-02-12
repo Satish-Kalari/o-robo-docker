@@ -10,6 +10,7 @@ COPY roboshop.conf /etc/nginx/nginx.conf
 # COPY and ADD are same, ADD has two extra function, copying from URL and untar
 # Adding our custom html data from static local folder to /usr/share/nginx/html/ location
 ADD static /usr/share/nginx/html/
+# we donr need CMD here, this will atomatically run once we create container
 
 # docker build -t web:v1 <---to build image
 
