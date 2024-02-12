@@ -15,3 +15,9 @@ RUN npm install
 CMD ["node", "server.js"]
 
 # No need to give mongodb URL in catalogue since server.js (line 135) contains name "monogobd" with which catalogue will connect and load into to monodb databse 
+
+# docker build -t catalogue:v1 <---to build image
+
+# docker run -d --name catalogue --network=roboshop catalogue:v1 <--- to create and run container with name, in roboshop network
+# docker ps <-- to see running container
+# docker logs catalogue <-- to see logs of catalogue
